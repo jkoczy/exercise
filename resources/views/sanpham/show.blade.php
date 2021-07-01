@@ -73,7 +73,7 @@
           if(data.n==0)
           alert('Thêm vào giỏ hàng không thành công');
           else
-          alert('Đã thêm vào giỏ hàng');
+            $("#lblCartCount").html(data.count);
       }});      
       return false;
     });

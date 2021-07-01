@@ -67,4 +67,10 @@ Route::prefix('AuthManagement')->group(function () {
 });
 Route::prefix('khach-hang')->group(function () {
     Route::post('them-vao-gio-hang/{id}',[KhachHangController::class,'ThemVaoGioHang']);
+    Route::get('/thong-tin-gio-hang',[KhachHangController::class,'ThongTinGioHang']);
+    Route::post('/cap-nhat-gio-hang',[KhachHangController::class,'CapNhatGioHang']);
+    Route::get('xoa-mat-hang/{id}',[KhachHangController::class,'XoaMatHang']);
+    Route::get('tien-hanh-dat-hang',[KhachHangController::class,'TienHanhDatHang']);
+    Route::post('tien-hanh-dat-hang',[KhachHangController::class,'store']);
+    Route::get('don-dat-hang/{id}',[KhachHangController::class,'DonDatHang']);
 });
